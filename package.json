@@ -1,0 +1,33 @@
+{
+  "name": "install-appy-pack-action",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "package": "ncc build dist/index.js",
+    "all": "npm run build && npm run package"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.0.4",
+    "@actions/io": "^1.0.2",
+    "@actions/tool-cache": "^1.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.38",
+    "@zeit/ncc": "^0.20.5",
+    "typescript": "^3.6.4"
+  },
+  "description": "A Github Action for installing Appy plus Cadius and Merlin32 so you can build Apple II projects.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digarok/install-appy-pack-action.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/digarok/install-appy-pack-action/issues"
+  },
+  "homepage": "https://github.com/digarok/install-appy-pack-action#readme",
+  "keywords": []
+}
