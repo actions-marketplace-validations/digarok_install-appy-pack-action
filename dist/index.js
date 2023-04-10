@@ -41,7 +41,7 @@ const toolCache = __importStar(__nccwpck_require__(7784));
 const core = __importStar(__nccwpck_require__(2186));
 const versions = {
     merlin: 'v1.1.8d',
-    cadius: 'v0.0.0',
+    cadius: 'v0.0.2',
     appy: 'v0.1.7'
 };
 const linuxUrls = {
