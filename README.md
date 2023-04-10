@@ -8,10 +8,10 @@ A Github Action to set up Appy toolchain.
 ```
     # This will install Appy plus Merlin32 and Cadius on your Github Runner machine
     - name: Install Appy
-      uses: digarok/install-appy-pack-action@master
+      uses: digarok/install-appy-pack-action@v0.0.0
       with:
         include_prodos: true
-        appyVersion:  0.15
+        appy_version:  0.1.7
     
     # Now you can use it to create a new bootable ProDOS disk
     - name: Create Boot Volume
