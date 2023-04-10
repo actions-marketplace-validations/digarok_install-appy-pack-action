@@ -1,6 +1,6 @@
 ![latest workflow](https://github.com/digarok/install-appy-pack-action/actions/workflows/main.yml/badge.svg)
 
-# install-cadius-action
+# install-appy-pack-action
 A Github Action to set up Appy toolchain.
 
 
