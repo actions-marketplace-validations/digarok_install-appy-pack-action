@@ -60,6 +60,8 @@ const macUrls = {
     appy: 'https://github.com/digarok/appy/releases/download/%s/appy_%s_MacOS_64bit.zip'
 };
 function getAppDownloadURL(app, version) {
+    var re = /^v/gi;
+    var binVer = version.replace(re, '');
     switch (os.type()) {
         case 'Linux':
             switch (app) {
@@ -68,7 +70,7 @@ function getAppDownloadURL(app, version) {
                 case 'cadius':
                     return util.format(linuxUrls.cadius, version, version);
                 case 'appy':
-                    return util.format(linuxUrls.appy, version, version);
+                    return util.format(linuxUrls.appy, version, binVer);
             }
         case 'Darwin':
             switch (app) {
@@ -77,7 +79,7 @@ function getAppDownloadURL(app, version) {
                 case 'cadius':
                     return util.format(macUrls.cadius, version, version);
                 case 'appy':
-                    return util.format(macUrls.appy, version, version);
+                    return util.format(macUrls.appy, version, binVer);
             }
         case 'Windows_NT':
             switch (app) {
@@ -86,7 +88,7 @@ function getAppDownloadURL(app, version) {
                 case 'cadius':
                     return util.format(windowsUrls.cadius, version, version);
                 case 'appy':
-                    return util.format(windowsUrls.appy, version, version);
+                    return util.format(windowsUrls.appy, version, binVer);
             }
     }
     return "";
