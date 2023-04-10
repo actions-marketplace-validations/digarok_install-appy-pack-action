@@ -42,7 +42,7 @@ const core = __importStar(__nccwpck_require__(2186));
 const versions = {
     merlin: 'v1.1.8d',
     cadius: 'v0.0.2',
-    appy: 'v0.1.7'
+    appy: 'v0.1.8'
 };
 const linuxUrls = {
     merlin: 'https://github.com/digarok/merlin32/releases/download/%s/merlin32-ubuntu-latest-%s.zip',
