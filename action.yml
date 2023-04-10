@@ -1,6 +1,16 @@
 name: 'install-appy-pack-action'
 description: 'Github Action to set up Appy toolchain'
 author: 'Dagen Brock'
+inputs:
+  include_prodos:
+    description: 'Download Prodos 2.4.2 files to allow you to create a bootable disk.'
+    default: 'true'
+  appy_version:
+    description: 'Specific version of Appy to install, if desired.'
+  cadius_version:
+    description: 'Specific version of Cadius to install, if desired.'
+  merlin_version:
+    description: 'Specific version of Merlin32 to install, if desired.'
 runs:
   using: 'node12'
   main: 'dist/index.js'

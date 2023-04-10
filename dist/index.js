@@ -143,21 +143,27 @@ function downloadAppy(version) {
 }
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
-        let merlinVersion = core.getInput('merlinVersion');
+        let merlinVersion = core.getInput('merlin_version');
         if (!merlinVersion) {
             merlinVersion = versions.merlin;
         }
-        let cadiusVersion = core.getInput('cadiusVersion');
+        let cadiusVersion = core.getInput('cadius_version');
         if (!cadiusVersion) {
             cadiusVersion = versions.cadius;
         }
-        let appyVersion = core.getInput('appyVersion');
+        let appyVersion = core.getInput('appy_version');
         if (!appyVersion) {
             appyVersion = versions.appy;
+        }
+        let includeProdos = false;
+        let inputIncludeProdos = core.getInput('include_prodos');
+        if (inputIncludeProdos.toLowerCase() == "true" || inputIncludeProdos == "") {
+            includeProdos = true;
         }
         console.log(`INPUTS - merlinVersion '${merlinVersion}'`);
         console.log(`INPUTS - cadiusVersion '${cadiusVersion}'`);
         console.log(`INPUTS - appyVersion '${appyVersion}'`);
+        console.log(`INPUTS - includeProdos '${includeProdos}'`);
         yield downloadMerlin32(merlinVersion);
         console.log(`Merlin32 version: '${merlinVersion}' has been downloaded and added to path`);
         yield downloadCadius(cadiusVersion);
