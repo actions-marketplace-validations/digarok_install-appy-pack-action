@@ -81,7 +81,7 @@ async function downloadMerlin32(version: string) {
             downloadPath = await toolCache.downloadTool(getAppDownloadURL("merlin32", version));
         } catch (exception) {
             console.log(exception)
-            throw new Error(util.format("Failed to download Merlin32 from location ", getDownloadURL(version)));
+            throw new Error(util.format("Failed to download Merlin32 from location ", getAppDownloadURL("merlin32", version)));
         }
         const extractedPath = await toolCache.extractZip(downloadPath);
         cachedToolpath = await toolCache.cacheDir(extractedPath, 'merlin32', version);
