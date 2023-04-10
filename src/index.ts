@@ -7,7 +7,7 @@ import * as core from '@actions/core';
 
 const versions = {
     merlin : 'v1.1.8d',
-    cadius : 'v0.0.0',
+    cadius : 'v0.0.2',
     appy : 'v0.1.7'
 }
 
